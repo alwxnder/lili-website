@@ -16,9 +16,9 @@ Themed extra by GPT:
 
 From the moment we pressed Start, I knew this was the greatest co-op adventure of my life. Every day with you feels like unlocking a new level, filled with surprises, laughter, and those little moments that feel like secret Easter eggs just for us.
 
-In the game of life, you are my best power-up. With you, my health bar is always full, and even on the toughest boss fights, I know we can win—because we’ve got the best team synergy.
+In the game of life, you are my best power-up. With you, my health bar is always full, and even on the toughest boss fights, I know we can win—because we've got the best team synergy.
 
-You’re my save point, my extra life, my infinite continues. No matter what challenges come our way, I’d play through it all again, as long as you’re my Player Two.
+You're my save point, my extra life, my infinite continues. No matter what challenges come our way, I'd play through it all again, as long as you're my Player Two.
 
 💖 Game Over? No.
 💖 Press Continue? Always.
@@ -170,23 +170,31 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.remove('open');
         }
     });
+
     // Start button
     const startButton = document.getElementById('start-button');
-startButton.addEventListener('click', () => {
-    showScreen(1);
-    const bgm = document.getElementById('bgm');
-    // Check if audio exists and is ready
-    if (bgm) {
-        bgm.play().catch(error => {
-            console.log("Audio playback failed:", error);
-        });
-    }
-});
+    startButton.addEventListener('click', () => {
+        showScreen(1);
+        const bgm = document.getElementById('bgm');
+        // Check if audio exists and is ready
+        if (bgm) {
+            bgm.play().catch(error => {
+                console.log("Audio playback failed:", error);
+            });
+        }
+    });
+
+    // Next button on letter screen
+    const nextButton = document.getElementById('next-button');
+    nextButton.addEventListener('click', () => {
+        showScreen(2);
+        updatePhoto();
+    });
 
     const photosNextButton = document.getElementById('photos-next-button');
-photosNextButton.addEventListener('click', () => {
-    showScreen(3);
-});
+    photosNextButton.addEventListener('click', () => {
+        showScreen(3);
+    });
 
     // Navigation buttons
     document.getElementById('nav-start').addEventListener('click', () => showScreen(0));
