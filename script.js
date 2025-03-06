@@ -84,10 +84,12 @@ const photos = [
 ];
 
 let currentPhotoIndex = 0;
-const photoGallery = document.querySelector('.photo-gallery');
+let photoGallery = null;
 let captionTypewriter = null;
 
 function updatePhoto() {
+    if (!photoGallery) return;
+    
     photoGallery.innerHTML = `
         <div class="gameboy-content">
             <div class="gameboy-image">
@@ -157,6 +159,9 @@ function revealGift(giftIndex) {
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize photoGallery
+    photoGallery = document.querySelector('.photo-gallery');
+    
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
