@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Love Letter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Start Screen -->
+<div id="start-screen" class="screen active">
+    <div class="pixel-heart"></div>
+    <h1>Press Start</h1>
+    <button id="start-button" class="pixel-button">START</button>
+    <!-- Falling Hearts -->
+    <!-- Falling Hearts -->
+<div class="falling-heart small" style="left: 10%; animation-delay: 0s;"></div>
+<div class="falling-heart large" style="left: 30%; animation-delay: 1s;"></div>
+<div class="falling-heart" style="left: 50%; animation-delay: 2s;"></div>
+<div class="falling-heart small" style="left: 70%; animation-delay: 3s;"></div>
+<div class="falling-heart large" style="left: 90%; animation-delay: 4s;"></div>
+</div>
+
+        <!-- Love Letter Screen -->
+        <div id="letter-screen" class="screen">
+            <div class="letter-container">
+                <div class="letter-content">
+                    <div id="typewriter-text"></div>
+                </div>
+                <button id="next-button" class="pixel-button">Next</button>
+            </div>
+        </div>
+
+        <!-- Photo Gallery Screen -->
+        <div id="gallery-screen" class="screen">
+            <div class="gameboy-container">
+                <button class="pixel-button" id="photos-next-button">Next</button>
+                <div class="gameboy">
+                    <div class="gameboy-screen">
+                        <div class="photo-gallery">
+                            <!-- Photos will be added here -->
+                        </div>
+                    </div>
+                    <div class="gameboy-controls">
+                        <div class="gameboy-dpad">
+                            <div class="dpad-button dpad-up"></div>
+                            <div class="dpad-button dpad-right" id="next-photo"></div>
+                            <div class="dpad-button dpad-down"></div>
+                            <div class="dpad-button dpad-left" id="prev-photo"></div>
+                        </div>
+                        <div class="gameboy-buttons">
+                            <div class="action-button" id="toggle-textbox">A</div>
+                            <div class="action-button" id="show-textbox">B</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gifts Screen -->
+        <div id="gifts-screen" class="screen">
+            <div class="gifts-container">
+                <div class="gift-box" id="gift1">
+                    <div class="pixel-bow"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-content">
+                        <div class="gift-reveal"></div>
+                    </div>
+                </div>
+                <div class="gift-box" id="gift2">
+                    <div class="pixel-bow"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-content">
+                        <div class="gift-reveal"></div>
+                    </div>
+                </div>
+                <div class="gift-box" id="gift3">
+                    <div class="pixel-bow"></div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-content">
+                        <div class="gift-reveal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <button class="menu-toggle" id="menu-toggle">MENU</button>
+        <div class="nav-buttons">
+            <button class="nav-button" id="nav-start">Start</button>
+            <button class="nav-button" id="nav-letter">Letter</button>
+            <button class="nav-button" id="nav-gallery">Photos</button>
+            <button class="nav-button" id="nav-gifts">Gifts</button>
+        </div>
+    </div>
+
+    <audio id="bgm" loop>
+    <source src="assets/mrg8bit.mp3" type="audio/mpeg">
+</audio>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html> 
